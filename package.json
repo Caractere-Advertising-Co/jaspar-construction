@@ -1,7 +1,7 @@
 {
-  "name": "gites-lastrijk",
+  "name": "Jaspar Construction",
   "version": "1.0.0",
-  "description": "Template gites La Strijk",
+  "description": "Template Jaspar Production",
   "main": "index.js",
   "scripts": {
     "build": "webpack"

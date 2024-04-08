@@ -99,3 +99,13 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes scroll-bottom {
+  0% {
+    transform: translate(0px, -50px);
+  }
+
+  100% {
+    transform: translate(0px, 50px);
+  }
+}

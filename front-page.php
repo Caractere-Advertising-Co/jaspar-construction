@@ -15,9 +15,9 @@ get_header();?>
                         <div class="swiper-slide">
                             <img src="<?php echo $bg['url'];?>" alt="bg_slider" />
                                 <div class="content">
-                                    <p class="baseline"><?php echo get_sub_field('sous-titre');?></p>
                                     <?php echo get_sub_field('titre');?>
-                                    <?php if($cta):?><a href="<?php echo $cta['url'];?>" class="cta-border"><?php echo $cta['title'];?></a><?php endif;?>
+                                    <p class="baseline"><?php echo get_sub_field('sous-titre');?></p>
+                                    <?php if($cta):?><a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a><?php endif;?>
                                 </div>
                         </div>
                     <?php endif;
@@ -27,112 +27,19 @@ get_header();?>
 
         <div class="swiper-pagination"></div>
     </div>
-
-    <div class="booking">
-        <!--<form class="research-bar" action="<?php echo get_bloginfo('url').'/booking';?>" method="POST">
-            <div class="research-bar__item">
-                <select class="research-bar__item--input gites" name="gites">
-                    <option value="la-chapelle">La Chapelle</option>
-                    <option value="la-passerelle">La Passerelle</option>
-                </select>
-            </div>
-            <div class="research-bar__item">
-                <input class="research-bar__item--input date" type="text" name="check-in" id="check-in" placeholder="Date d'arrivée" />
-            </div>
-            <div class="research-bar__item">
-                <input class="research-bar__item--input date" type="text" name="check-out" id="check-out" placeholder="Date de départ" />
-            </div>
-            <div class="research-bar__item">
-                <input class="research-bar__item--input people" type="text" name="people" id="people" placeholder="Personnes" />
-            </div>  
-            <div class="research-bar__item button">
-                <input type="submit" id="rechercher" value="Rechercher" />
-            </div>
-        </form>
-
-        
-        <div>
-        <?php if($_POST):
-                $checkin = $_POST['check-in'];
-                $checkout = $_POST['check-out'];
-                $persons = $_POST['people'];
-
-                $checkin = date("Y-m-d", strtotime($checkin));
-                $checkout = date("Y-m-d", strtotime($checkout));
-            endif;?>
-        </div>-->
-
-
-        <?php echo do_shortcode( '[vikbooking category_id="" view="vikbooking" lang="*"]');?>
-    </div>
-
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script>
-    jQuery(document).ready(function($){
-        $("#check-in, #check-out").datepicker({ dateFormat: 'dd/mm/yy' });
-    });
-    </script>
-    
-    <span class="rotate-reverse cta-hero">
-        <?php get_template_part( 'templates-parts/cta-reservation' );?>
-    </span>
 </section>
 
-<?php if(!$_POST): ?>
-<section id="card-gites">
-    <div class="container columns nomobile">
-        <?php 
-            if(have_rows('services')):
-                while(have_rows('services')): the_row();
-                    $bg = get_sub_field('background_service');
-                    $nom = get_sub_field('nom_service');
-                    $cta = get_sub_field('lien_service');
-                ?>
+<?php get_template_part( 'templates-parts/separator/infinite-separator' );?>
+<?php get_template_part( 'templates-parts/section-introduction' );?>
+<?php get_template_part( 'templates-parts/section-galerie' );?>
+<?php get_template_part( 'templates-parts/section-bannerfullwidth' );?>
 
-                    <a href="<?php echo $cta['url'];?>">
-                        <div class="card" style="background:url('<?php echo $bg['url'];?>');"> 
-                            <div class="content from-bottom">
-                                <p>Découvrir</p>
-                                <h2><?php echo $nom;?></h2>
-                            </div>
-                        </div>
-                    </a>
-
-                <?php endwhile;
-            endif;?>
-    </div>
-
-    <div class="container nodesktop">
-        <div class="swiper swiper-card">
-            <div class="swiper-wrapper">
-                <?php 
-                    if(have_rows('services')):
-                        while(have_rows('services')): the_row();
-                            $bg = get_sub_field('background_service');
-                            $nom = get_sub_field('nom_service');
-                            $cta = get_sub_field('lien_service');
-                        ?>
-
-                            <div class="swiper-slide card" style="background:url('<?php echo $bg['url'];?>');"> 
-                                <div class="content from-bottom">
-                                    <p>Découvrir</p>
-                                    <h2><?php echo $nom;?></h2>
-                                </div>
-                            </div>
-
-                        <?php endwhile;
-                endif;?>
-            </div>
-        </div>
-    </div>
-</section>
-
-<?php get_template_part( 'templates-parts/separator/tiny-separator' );?>
-<?php get_template_part( 'templates-parts/section-aubel' );?>   
-<?php get_template_part( 'templates-parts/section-citation' );?>
+<?php get_template_part( 'templates-parts/section-joinus' );?>
+<?php get_template_part( 'templates-parts/section-card-services' );?>
+<?php get_template_part( 'templates-parts/section-mots-president' );?>
 <?php get_template_part( 'templates-parts/section-two-columns-tit' );?>
-<?php get_template_part( 'templates-parts/section-extra' );?>
+<?php get_template_part( 'templates-parts/section-acco-infos' );?>
+<?php get_template_part( 'templates-parts/section-reference' );?>
 
 <section id="intro-actualites">
     <div class="container">
@@ -148,10 +55,9 @@ get_header();?>
         ?>
     </div>
 </section>
-<?php get_template_part( 'templates-parts/separator/tiny-separator' );?>
 
 <section id="liste-actualites">
-    <div class="container">
+    <div class="container grid">
         <?php 
         $args = array(
             "post_type" => "post",
@@ -173,42 +79,9 @@ get_header();?>
     <div class="container">
         <?php $ctaActus = get_field('cta-actus');
 
-        if($ctaActus): echo '<a href="'.$ctaActus['url'].'" class="cta-border cta-actus">'.$ctaActus['title'].'</a>';endif;
+        if($ctaActus): echo '<a href="'.$ctaActus['url'].'" class="cta cta-actus">'.$ctaActus['title'].'</a>';endif;
         ?>
     </div>
 </section>
-
-<section id="galerie-front" class="galeries-home">
-    <?php 
-        $galerie = get_field('galerie-gle-separator');
-        $cta = get_field('cta-gle-separator');
-    
-    ?>
-    <div class="columns">
-        <div class="col-g anim-img-1">
-            <?php if($galerie):?>
-                <img src="<?php echo $galerie[0]['url'];?>" alt="<?php echo $galerie[0]['title'];?>" class="from-bottom "/>
-            <?php endif;?>
-        </div>
-
-        <div class="col-d anim-img-2">
-        <?php if($galerie):?>
-                <img src="<?php echo $galerie[1]['url'];?>" alt="<?php echo $galerie[1]['title'];?>" class="from-bottom "/>
-            <?php endif;?>
-        </div>
-    </div>
-
-    <div class="container anim-img-3">
-    <?php if($galerie):?>
-                <img src="<?php echo $galerie[2]['url'];?>" alt="<?php echo $galerie[2]['title'];?>" class="from-bottom "/>
-            <?php endif;?>
-        <a href="" class="cta-border">En images</a>
-    </div>
-</section>
-
-<?php get_template_part( 'templates-parts/section-bannerfullwidth' );?>
-<?php get_template_part( 'templates-parts/contact' );?>
-
-<?php endif;?>
 
 <?php get_footer();?>

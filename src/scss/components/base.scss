@@ -12,11 +12,7 @@
 body {
   min-height: 100dvh;
   background: $light;
-  font-family: "RobotoSlab Var", serif;
-}
-
-header {
-  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 #header-simple-page {
@@ -359,7 +355,7 @@ a {
 }
 
 .tiny-separator {
-  margin: 100px auto;
+  margin: 0px auto 100px auto;
   height: 30px;
   width: 2px;
   background-color: $primary-color;
@@ -371,6 +367,27 @@ a {
   display: block;
   background: $primary-color;
   margin: 30px auto;
+}
+
+.infinite-separator {
+  width: 3px;
+  display: block;
+  height: 50px;
+  margin: -25px auto 100px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  background: $light;
+  border-radius: 3px;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $primary-color;
+    animation: 2s scroll-bottom infinite;
+  }
 }
 
 /*******************/

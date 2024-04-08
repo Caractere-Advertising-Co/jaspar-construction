@@ -1,5 +1,5 @@
 #hero-container {
-  height: 90vh;
+  height: 70vh;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -10,7 +10,7 @@
       overflow: hidden;
 
       .swiper-slide {
-        height: 90vh;
+        height: 70vh;
 
         img {
           position: absolute;
@@ -21,21 +21,21 @@
 
         .content {
           position: relative;
-          margin-top: 250px;
+          margin-top: 180px;
           z-index: 1;
 
           p {
             text-transform: uppercase;
             color: $light;
             letter-spacing: 7px;
-            text-align: center;
+            text-align: left;
             font-weight: 400;
             font-size: 0.7rem;
           }
 
           h1 {
             color: $light;
-            text-align: center;
+            text-align: left;
 
             strong {
               font-weight: 800;
@@ -55,23 +55,56 @@
 
     .swiper-pagination {
       position: absolute;
-      right: 0;
+      right: 40px;
       left: auto;
-      top: 50%;
-      width: 40px;
+      bottom: 40px;
+      width: fit-content;
       gap: 10px;
       height: auto;
-      display: flex;
-      flex-direction: column;
 
       .swiper-pagination-bullet {
-        border: 2px solid $light;
+        border: none;
         background: none;
+        color: $light;
+        opacity: 1;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        margin-right: 20px;
+        margin-left: 0;
+        transition: all ease-in 200ms;
+
+        &::after {
+          content: "";
+          width: 80px;
+
+          height: 1px;
+          display: block;
+          position: absolute;
+          right: -100px;
+          top: 8px;
+          transform: scaleX(0);
+          transition: transform ease-in 200ms;
+          transform-origin: left;
+          transition-delay: 400ms;
+        }
+      }
+
+      .swiper-pagination-bullet:last-child {
+        margin-right: 0;
+        &::after {
+          display: none;
+        }
       }
 
       .swiper-pagination-bullet-active {
-        background-color: $primary-color;
-        border-color: $primary-color;
+        color: $primary-color;
+        margin-right: 110px;
+        position: relative;
+
+        &::after {
+          background-color: $light;
+          transform: scale(1);
+        }
       }
     }
   }
@@ -163,7 +196,11 @@
 }
 
 #liste-actualites {
-  padding-bottom: 550px;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
   .cta-actus {
     margin: 100px auto;
   }

@@ -1,7 +1,7 @@
 <?php
 /*
-Template Name: Gites
-Template Post Type: gites, gite, gîte, gîtes
+Template Name: Projets
+Template Post Type: projets, projet 
 */
 
 get_header();

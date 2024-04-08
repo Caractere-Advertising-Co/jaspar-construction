@@ -24,7 +24,7 @@
         </div>
         <div class="col-d">
             <?php if($intro): echo '<span class="from-bottom">' . $intro . '</span>'; endif;?>
-            <?php if($btnJps):?><a href="<?php echo $btnJps['url'];?>" class="cta-border from-bottom"><?php echo $btnJps['title'];?></a><?php endif;?>
+            <?php if($btnJps):?><a href="<?php echo $btnJps['url'];?>" class="cta from-bottom"><?php echo $btnJps['title'];?></a><?php endif;?>
         </div>
     </div>
 </section>

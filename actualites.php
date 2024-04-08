@@ -16,7 +16,7 @@ else :
     $bg_header = get_field('bg_header');
     $bg_url = $bg_header['url'];
 endif;
-
+    
 $titreDec = get_field('decouverte');
 $cta = get_field('cta');
 

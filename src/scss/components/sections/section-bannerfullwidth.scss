@@ -1,6 +1,8 @@
 #banner-fullwidth {
   background-color: $secondary-color;
   padding: 100px 0;
+  width: 96vw;
+  margin: 2vw;
 
   .container {
     h4 {
@@ -12,12 +14,13 @@
       color: $light;
 
       strong {
-        color: $primary-color;
+        color: $light;
       }
     }
 
-    .cta {
-      margin: -60px 0 0 auto;
+    p {
+      color: $light;
+      margin: 30px 0;
     }
   }
 }

@@ -1,0 +1,22 @@
+#section-blue {
+  background: $secondary-color;
+  padding: 100px 0;
+
+  .container {
+    h2 {
+      color: $light;
+    }
+
+    .paragraph {
+      margin-top: 50px;
+      padding-left: 25vw;
+      p {
+        color: $light;
+      }
+
+      .cta {
+        margin-top: 50px;
+      }
+    }
+  }
+}

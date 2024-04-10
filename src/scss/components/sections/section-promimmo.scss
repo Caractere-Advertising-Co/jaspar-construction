@@ -1,0 +1,29 @@
+#section-promimmo {
+  h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+
+  .columns {
+    .col-g {
+      width: 60%;
+    }
+
+    .col-d {
+      width: 40%;
+      color: $dark-gray;
+      padding: 60px;
+
+      .blue-block {
+        background-color: $secondary-color;
+        color: $light;
+        padding: 40px 60px;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

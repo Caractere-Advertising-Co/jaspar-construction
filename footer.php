@@ -15,8 +15,8 @@ $cttCol3 = get_field('contenu_colonne_3','options');
 
 <footer>
     <div class="container">
-        <div class="footer-top">
-            <div class="col general-infos">
+        <div class="footer-top columns">
+            <div class="col-g general-infos">
                 <?php $logo = get_field('logo_footer','options');?>
                 
                 <?php if($logo):?>
@@ -29,56 +29,42 @@ $cttCol3 = get_field('contenu_colonne_3','options');
 
             </div>
 
-            <div class="col col-2">
-                <?php if($cttCol2): echo $cttCol2;endif;?>
-                <?php 
-                    if($gites):
-                        echo '<ul>';
-                        foreach($gites as $g):?>
-                            <li><a href="<?php echo $g->guid;?>"><?php echo $g->post_title;?></a></li>
-                        <?php endforeach;
-                        echo '</ul>';
-                    endif;?>
-                            
-                <?php if($titreCol22): echo '<h4>'.$titreCol22.'</h4>';endif;?>
-                <?php 
-                    if($liensCol2):
-                        echo '<ul>';
-                        foreach($liensCol2 as $l):?>
-                            <li><a href="<?php echo $l->guid;?>"><?php echo $l->post_title;?></a></li>
-                        <?php endforeach;
-                        echo '</ul>';
-                    endif;?>
-            </div>
+            <div class="col-d content">
+                <div class="col col-2">
+                    <?php if($cttCol2): echo $cttCol2;endif;?>
+                </div>
 
-            <div class="col rs_footer">
-                <?php if($cttCol3): echo $cttCol3;endif;?>
+                <div class="col col-3">
+                    <?php wp_nav_menu( 'footer' );?>
+                </div>
+
+                <div class="col rs_footer">
+                    <?php 
+                    if(have_rows('reseaux-sociaux','options')):
+                        while(have_rows('reseaux-sociaux','options')): the_row();
+                            $icone = get_sub_field('icone');
+                            $url = get_sub_field('lien');
+
+                            echo '<a href="'.$url.'"><img src="'.$icone['url'].'"/></a>';
+                        endwhile;
+                    endif;?>    
+                </div>
             </div>
         </div>
     </div>
     <div class="footer_bottom">
-        <div class="container desktop">
-            <a href="">Cookies</a>
-            <div>
-                <?php 
-                    $copyright = get_field('copyright','options');
-                    if($copyright): echo $copyright; endif;
-                ?>
-            </div>
-            <a href="">Confidentialité</a>
-        </div>
-
-        <div class="container mobile">
-            <div class="links">
-                <a href="">Cookies</a>
-                <a href="">Confidentialité</a>
-            </div>
-
-            <div class="copyright">
+        <div class="container columns">
             <?php 
-                    $copyright = get_field('copyright','options');
-                    if($copyright): echo $copyright; endif;
-                ?>
+                $copyright = get_field('copyright','options');
+                $cookies = get_field('cookies','options');
+                $conf = get_field('confidentialites','options');
+            
+                if($copyright): echo $copyright; endif;
+            ?>
+                <div class="links">
+                    <a href="<?php echo $cookies['url'];?>"><?php echo $cookies['title'];?></a>
+                    <a href="<?php echo $conf['url'];?>"><?php echo $conf['title'];?></a>
+                </div>
             </div>
         </div>
     </div>

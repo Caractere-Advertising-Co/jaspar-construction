@@ -10,7 +10,7 @@ $i = 0;
     <div class="container-fullwidth columns">
         <div class="colg">
             <a data-fslightbox href="<?php echo $firstImg['url'];?>">
-                <div class="img-card" style="background:url('<?php echo $firstImg['url'];?>');">
+                <div class="img-card from-bottom" style="background:url('<?php echo $firstImg['url'];?>');">
                     <span class="more">+</span>
                 </div>
             </a>
@@ -19,7 +19,7 @@ $i = 0;
             <?php foreach($galerie as $g):?>
                 <?php if($i > 0):?>
                     <a data-fslightbox href="<?php echo $g['url'];?>">
-                    <div class="img-card" style="background:url('<?php echo $g['url'];?>');">
+                    <div class="img-card from-bottom" style="background:url('<?php echo $g['url'];?>');">
                         <span class="more">+</span>
                     </div></a>
                 <?php endif;

@@ -1,0 +1,43 @@
+#section-slider-left {
+  background: linear-gradient(90deg, $light-gray 40%, $light 40%);
+  padding: 80px 0;
+  margin: 100px auto;
+  position: relative;
+  height: 500px;
+
+  .container {
+    .col-g {
+      .swiper {
+        position: absolute;
+        left: 0;
+        width: 35vw;
+        height: 500px;
+
+        .swiper-slide {
+          height: 500px;
+        }
+
+        .sesli-btn-prev,
+        .sesli-btn-next {
+          right: 0;
+          left: auto;
+        }
+
+        .sesli-btn-prev {
+          right: 50px;
+        }
+      }
+    }
+
+    .col-d {
+      h2 {
+        margin-bottom: 30px;
+        color: $secondary-color;
+      }
+
+      .cta {
+        margin-top: 0px;
+      }
+    }
+  }
+}

@@ -332,10 +332,14 @@
 
     h2 {
       margin-bottom: 30px;
+      color: $secondary-color;
     }
 
     .subtitle {
       color: $dark-dark-gray;
+    }
+    p {
+      margin-bottom: 100px;
     }
   }
 }

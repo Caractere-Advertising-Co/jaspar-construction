@@ -1,18 +1,18 @@
 footer {
-  background-color: $dark-dark-gray;
+  background-color: $secondary-color;
   .container {
+    margin-bottom: 150px;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 50px;
+
     .footer-top {
       display: flex;
       justify-content: space-around;
       padding-top: 80px;
 
-      .col {
-        width: calc(100% / 3);
-        padding-bottom: 50px;
-
+      .col-g {
         .logo-footer {
-          height: 100px;
-          margin-top: 20px;
+          height: 130px;
 
           img {
             width: auto;
@@ -20,100 +20,116 @@ footer {
             object-fit: fill;
           }
         }
+      }
 
-        h4 {
-          color: $primary-color;
-          font-family: "Poppins", sans-serif;
-          font-size: 0.8rem;
-          text-transform: uppercase;
-          font-weight: 400;
-          letter-spacing: 3px;
-        }
+      .col-d {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
 
-        ul {
-          list-style: none;
-          margin-bottom: 20px;
-          li {
-            margin-bottom: 0;
+        .col {
+          h4 {
+            color: $primary-color;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 3px;
+          }
+
+          ul {
+            list-style: none;
+            li {
+              margin-bottom: 0;
+              line-height: 1.5rem;
+              text-align: left;
+              a {
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+            }
+          }
+
+          p,
+          a {
+            font-size: 0.8rem;
             line-height: 1.5rem;
-            text-align: left;
-            a {
-              font-size: 0.8rem;
-              letter-spacing: 1px;
+            font-weight: 400;
 
-              &:hover {
-                color: $primary-color;
+            strong {
+              a {
+                color: $primary-color !important;
+                text-transform: uppercase;
+                letter-spacing: 3px;
               }
             }
           }
         }
 
-        p,
-        a {
-          font-size: 0.8rem;
-          line-height: 1.5rem;
-          font-weight: 400;
-
-          strong {
-            a {
-              color: $primary-color !important;
-              text-transform: uppercase;
-              letter-spacing: 3px;
+        .col_1 {
+          a {
+            &::before {
+              content: ">";
+              margin-right: 10px;
+              color: $primary-color;
+              font-weight: 500;
             }
           }
         }
-      }
 
-      .general-infos {
-        min-width: 50%;
-        text-align: left;
+        .col-2 {
+          p {
+            margin-bottom: 0;
+            color: $light;
+          }
 
-        img {
-          margin-bottom: 20px;
-        }
-
-        p {
-          color: $light !important;
-          text-align: left;
-          line-height: 1.2rem;
-        }
-      }
-
-      .col_1 {
-        a {
-          &::before {
-            content: ">";
-            margin-right: 10px;
+          strong {
             color: $primary-color;
-            font-weight: 500;
+          }
+
+          a {
+            font-weight: 600;
           }
         }
-      }
 
-      .col-2 {
-        p {
-          margin-bottom: 0;
-          color: $light;
-        }
-      }
+        .rs_footer {
+          display: flex;
+          align-items: flex-end;
+          gap: 10px;
 
-      .rs_footer {
-        min-width: 20%;
-        p {
-          color: $light;
+          a {
+            background: rgba(255, 255, 255, 0.5);
+            width: 30px;
+            display: block;
+            padding: 5px;
+            margin-bottom: 0;
+
+            img {
+              filter: invert(1);
+            }
+          }
+          p {
+            color: $light;
+          }
         }
       }
     }
   }
 
   .footer_bottom {
-    background-color: $secondary-color;
+    background-color: $primary-color;
 
     .container {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       padding: 25px 0;
+      margin: 0 auto;
+      border: none;
 
       a {
         font-weight: 300;
@@ -131,7 +147,7 @@ footer {
         text-align: center;
 
         strong {
-          color: $primary-color;
+          color: $light;
         }
 
         a {
@@ -141,8 +157,11 @@ footer {
       }
     }
 
-    .mobile {
-      display: none;
+    a + a::before {
+      content: "•";
+      font-size: 1rem;
+      color: $light;
+      margin: 0 10px;
     }
   }
 }

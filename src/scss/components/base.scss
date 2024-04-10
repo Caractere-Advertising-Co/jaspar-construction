@@ -436,7 +436,9 @@ a {
 }
 
 .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next,
+.swiper-sesli-button-prev,
+.swiper-sesli-button-next {
   position: absolute;
   height: 50px;
   width: 50px;
@@ -445,6 +447,7 @@ a {
   top: auto;
   left: 0;
   bottom: 0;
+  z-index: 1;
 
   &::after {
     font-size: 1rem;
@@ -452,7 +455,8 @@ a {
   }
 }
 
-.swiper-button-next {
+.swiper-button-next,
+.swiper-sesli-button-next {
   left: 50px;
   background-color: $primary-color;
 }
@@ -643,7 +647,9 @@ form {
         }
 
         .swiper-button-next,
-        .swiper-button-prev {
+        .swiper-button-prev,
+        .swiper-sesli-button-prev,
+        .swiper-sesli-button-next {
           background: $primary-color;
           height: 50px;
           width: 50px;

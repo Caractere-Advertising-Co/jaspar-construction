@@ -1,0 +1,32 @@
+#transition-blog {
+  margin: 100px 0 0 0;
+  padding-bottom: 100px;
+  border-bottom: 1px solid $light-gray;
+  .imgTr {
+    width: 60vw;
+  }
+
+  .container {
+    margin-top: -500px;
+    .col-g {
+    }
+
+    .col-d {
+      background-color: $secondary-color;
+      padding: 80px 60px;
+
+      h2,
+      p {
+        color: $light;
+      }
+
+      h2 {
+        margin-bottom: 50px;
+      }
+
+      .cta {
+        margin-top: 50px;
+      }
+    }
+  }
+}

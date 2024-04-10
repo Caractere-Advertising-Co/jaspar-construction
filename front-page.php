@@ -34,11 +34,10 @@ get_header();?>
 <?php get_template_part( 'templates-parts/section-galerie' );?>
 <?php get_template_part( 'templates-parts/section-bannerfullwidth' );?>
 
+<?php get_template_part( 'templates-parts/section-slider-left' );?>
+<?php get_template_part( 'templates-parts/section-slider-right' );?>
+
 <?php get_template_part( 'templates-parts/section-joinus' );?>
-<?php get_template_part( 'templates-parts/section-card-services' );?>
-<?php get_template_part( 'templates-parts/section-mots-president' );?>
-<?php get_template_part( 'templates-parts/section-two-columns-tit' );?>
-<?php get_template_part( 'templates-parts/section-acco-infos' );?>
 <?php get_template_part( 'templates-parts/section-reference' );?>
 
 <section id="intro-actualites">

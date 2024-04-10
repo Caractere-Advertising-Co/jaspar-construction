@@ -1,0 +1,32 @@
+#section-slider-right {
+  .container {
+    margin: 0 auto;
+    .col-g {
+      padding-top: 350px;
+      h2 {
+        margin-bottom: 30px;
+        color: $secondary-color;
+      }
+
+      .cta {
+        margin-top: 50px;
+      }
+    }
+
+    .col-d {
+      .swiper {
+        height: 800px;
+
+        .sesli-btn-prev,
+        .sesli-btn-next {
+          right: 0;
+          left: auto;
+        }
+
+        .sesli-btn-prev {
+          right: 50px;
+        }
+      }
+    }
+  }
+}

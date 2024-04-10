@@ -63,38 +63,24 @@ const swiperExtra = new Swiper(".swiper-extra", {
   },
 });
 
-/* Page Gites */
-
-const swiperRooms = new Swiper(".swiper-chambres", {
-  slidesPerView: 3,
-  spaceBetween: 50,
-  loop: true,
+const swiperLeft = new Swiper(".swiper-sectionslider", {
+  cssMode: true,
+  slidesPerView: 1,
+  autoplay: false,
 
   navigation: {
-    nextEl: ".swiper-chambre-button-next",
-    prevEl: ".swiper-chambre-button-prev",
-  },
-
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 50,
-    },
+    nextEl: ".sesli-btn-next",
+    prevEl: ".sesli-btn-prev",
   },
 });
 
-const swiperAcco = new Swiper(".swiper-acco", {
+const swiperRight = new Swiper(".swiper-sectionsliderRight", {
+  cssMode: true,
   slidesPerView: 1,
-  loop: true,
+  autoplay: false,
 
   navigation: {
-    nextEl: ".swiper-acco-button-next",
-    prevEl: ".swiper-acco-button-prev",
+    nextEl: ".sliri-btn-next",
+    prevEl: ".sliri-btn-prev",
   },
 });

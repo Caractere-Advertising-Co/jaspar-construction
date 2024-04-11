@@ -5,53 +5,71 @@ Template Name: Services
 
 get_header();
 
-$surtitre = get_field('surtitre');
 $titre = get_field('titre');
-
-$bg_header = get_field('bg_header');
-
-if(!$bg_header):
-    $bg_url = get_template_directory_uri(  ).'/assets/img/bg-default.jpg';
-else :
-    $bg_header = get_field('bg_header');
-    $bg_url = $bg_header['url'];
-endif;
-
-$surtitreIntro = get_field('surtitre-intro');
-$titreIntro = get_field('titre-intro');
-$txtIntro = get_field('introduction');
-
+$titreBaca = get_field('titre-baca');
+$cta = get_field('services');
 ?>
 
-<header id="header-simple-page" >
-    <img src="<?php echo $bg_url;?>" alt="<?php echo $bg_header['title'];?>"/>
+<section id="galerie">
+    <div class="container intro">
+        <?php if($titre): echo $titre;endif?>
 
-    <div class="container">
-        <div class="content">
-            <span class="subtitle"><?php if($surtitre): echo $surtitre;endif;?></span>
-            <?php if($titre): echo $titre; endif;?>
+        <div class="bloc-filter">
+            <?php 
+                $terms = get_terms('type-realisations', array(
+                    'orderby' => 'name',
+                    'order' => 'asc',
+                    'hide-empty' => false,
+                ));
+                            
+                echo '<div class="filter active" data-filter="all">Tout</div>';
+                        
+                foreach ($terms as $term) :
+                    echo '<div class="filter" data-filter="'. $term->name .'">'. $term->name .'</div>';
+                endforeach; 
+            ?>
         </div>
     </div>
-</header>
+    <div class="grid-realisations">
+        <?php 
+            $args = array(
+                "post_type" =>  "realisations",
+                "post_status" => "publish",
+                "posts_per_page" => -1
+            );
+            
+            $query = new WP_Query($args);
+            
+            if($query->have_posts()):
+                while($query->have_posts()): $query->the_post();?>
 
-<section id="simple-page">
-    <div class="container intro">
-        <?php if($surtitreIntro): echo '<p class="subtitle">'.$surtitre.'</p>';endif?>
-        <?php if($titreIntro): echo $titreIntro;endif?>
-        <?php if($txtIntro): echo $txtIntro; endif?>
+                    <?php $taxs = get_the_terms(get_the_id(),'type-realisations');
+                    
+                    if($taxs): 
+                        foreach($taxs as $tax):
+                            $value = $tax->name;
+                        endforeach;
+                    endif;?>
+
+                    <a data-fslightbox href="<?php echo get_the_post_thumbnail_url();?>" data-filters="<?php echo $value;?>">
+                        <div class="card-realisation">
+                            <img src="<?php echo get_the_post_thumbnail_url();?>" />
+                        </div>
+                    </a>
+                <?php endwhile;
+            endif;
+            
+            wp_reset_postdata();
+            ?>
     </div>
 </section>
 
-<section id="liste-actualites">
-    <div class="container" >
-        <?php if(have_rows('services')):
-            $i = 0;
-            while(have_rows('services')): the_row();
-                get_template_part('templates-parts/blog/card-blog', null, array( 'id' => $i));
-                $i++;
-            endwhile;
-        endif; ?>
+<section id="banner-discussion">
+    <div class="container">
+        <?php if($titreBaca): echo $titreBaca; endif;?>
+        <?php if($cta): echo '<a href="'.$cta['url'].'" class="cta">'.$cta['title'].'</a>'; endif;?>
     </div>
 </section>
 
+<?php get_template_part( 'templates-parts/section-introduction' );?>
 <?php get_footer();

@@ -55,9 +55,9 @@ function enqueue_custom_scripts() {
     wp_localize_script('custom-scripts', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 }
 
-/*********************************
- Custom Post Type ---- Projets
-**********************************/
+/*********************************************
+ Custom Post Type ---- Projets & Réalisations
+**********************************************/
 
 function add_custom_post_projets() {
 
@@ -112,6 +112,77 @@ function add_custom_post_projets() {
 	register_post_type( 'projets', $args );
 }
 add_action( 'init', 'add_custom_post_projets', 0 );
+
+function add_custom_post_realisations() {
+
+	$labels = array(
+		'name'                  => _x( 'Réalisation.s', 'Post Type General Name', 'custom_post_type' ),
+		'singular_name'         => _x( 'Réalisation', 'Post Type Singular Name', 'custom_post_type' ),
+		'menu_name'             => __( 'Réalisation.s', 'custom_post_type' ),
+		'name_admin_bar'        => __( 'Réalisation', 'custom_post_type' ),
+		'archives'              => __( 'Archives', 'custom_post_type' ),
+		'attributes'            => __( 'Item Attributes', 'custom_post_type' ),
+		'all_items'             => __( 'Tous', 'custom_post_type' ),
+		'add_new_item'          => __( 'Ajouter une nouvelle réalisation', 'custom_post_type' ),
+		'add_new'               => __( 'Ajouter réalisation', 'custom_post_type' ),
+		'new_item'              => __( 'Nouveau', 'custom_post_type' ),
+		'edit_item'             => __( 'Modifier', 'custom_post_type' ),
+		'update_item'           => __( 'Mettre à jour', 'custom_post_type' ),
+		'view_item'             => __( 'Voir', 'custom_post_type' ),
+		'view_items'            => __( 'Voir', 'custom_post_type' ),
+		'search_items'          => __( 'Recherche', 'custom_post_type' ),
+		'not_found'             => __( 'Non trouvé', 'custom_post_type' ),
+		'not_found_in_trash'    => __( 'Non trouvé', 'custom_post_type' ),
+		'featured_image'        => __( 'Miniature', 'custom_post_type' ),
+		'set_featured_image'    => __( 'Définir la miniature', 'custom_post_type' ),
+		'remove_featured_image' => __( 'Retirer la miniature', 'custom_post_type' ),
+		'use_featured_image'    => __( 'Utiliser comme miniature', 'custom_post_type' ),
+		'insert_into_item'      => __( 'Insérer', 'custom_post_type' ),
+		'uploaded_to_this_item' => __( 'Uploader', 'custom_post_type' ),
+		'items_list'            => __( 'List', 'custom_post_type' ),
+		'items_list_navigation' => __( 'Items list navigation', 'custom_post_type' ),
+		'filter_items_list'     => __( 'Filtrer', 'custom_post_type' ),
+	);
+	$args = array(
+		'label'                 => __( 'Réalisation', 'custom_post_type' ),
+		'description'           => __( 'Réalisations Jaspar Construction', 'custom_post_type' ),
+		'labels'                => $labels,
+		'taxonomies'            => array( 'realisations' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 4,
+		'menu_icon'             => 'dashicons-house',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'supports'				=> array('title', 'revisions', 'author', 'thumbnail'),
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'		=> 'post',
+	);
+	register_post_type( 'realisations', $args );
+
+	// Déclaration de la taxonomie
+
+	$labels = array(
+		'name' => 'Type de réalisation',
+		'new_item_name' => 'Nom filtre',
+		'parent_item' => 'Nom projet parent',
+	  );
+	
+	  $args = array(
+		'labels' => $labels,
+		'public' => true,
+		'show_in_rest' => true,
+		'hierarchical' => true,
+	  );
+	
+	  register_taxonomy( 'type-realisations', 'realisations', $args);
+}
+add_action( 'init', 'add_custom_post_realisations', 0 );
 
 /* Récup infos popup */
 

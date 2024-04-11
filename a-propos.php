@@ -9,4 +9,4 @@ get_header();
 <?php get_template_part( 'templates-parts/section-blue' );?>
 <?php get_template_part( 'templates-parts/section-prom-immo' );?>
 
-<?php get_footer();?>   
+<?php get_footer();  

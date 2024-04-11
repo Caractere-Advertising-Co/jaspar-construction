@@ -1,81 +1,65 @@
 .page-template-services {
-  #simple-page {
+  #galerie {
     padding-top: 100px;
 
-    .intro {
+    h1 {
+      text-align: center;
+      color: $secondary-color;
+      font-weight: 600;
+    }
+
+    .bloc-filter {
+      display: flex;
+      gap: 50px;
+      margin: 20px auto 50px;
+      letter-spacing: 2px;
+      justify-content: center;
+
+      .filter {
+        text-transform: uppercase;
+        color: $middle-gray;
+      }
+
+      .active {
+        color: $secondary-color;
+        font-weight: 600;
+      }
+
+      .filter + .filter {
+        padding-left: 50px;
+        border-left: 1px solid $middle-gray;
+      }
+    }
+
+    .grid-realisations {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      a {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #banner-discussion {
+    padding: 100px 0;
+    margin-bottom: 100px;
+    border-bottom: 1px solid $light-gray;
+
+    .container {
       h2,
       p {
+        color: $secondary-color;
         text-align: center;
       }
 
-      h2 {
-        margin-bottom: 30px;
-      }
-
-      margin-bottom: 100px;
-    }
-
-    .container {
-      .colg {
-        width: 60%;
-
-        h1 {
-          color: $secondary-color;
-          font-size: 3.5rem;
-          line-height: 4rem;
-          font-weight: 300;
-
-          strong {
-            font-weight: 700;
-          }
-        }
-      }
-
-      .cold {
-        padding-left: 20%;
-        padding-top: 80px;
-
-        p {
-          &:last-child {
-            margin-bottom: 80px;
-          }
-        }
+      p {
+        margin: 30px;
       }
     }
-  }
 
-  #section-cta-contact {
-    background-color: $light;
-    margin: 150px;
-    padding: 0;
-  }
-
-  #contact {
-    background-color: $light !important;
-    padding-top: 350px;
-  }
-
-  #banner-fullwidth {
-    background: none;
-
-    .container {
-      .subtitle {
-        color: $dark-gray;
-      }
-
-      h2 {
-        color: $dark-gray;
-
-        strong {
-          color: $primary-color;
-        }
-      }
-
-      .cta {
-        background: none;
-        color: $primary-color;
-        border: 1px solid $primary-color;
-      }
+    .cta {
+      margin: auto;
     }
   }
 }

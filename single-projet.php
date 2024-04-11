@@ -16,23 +16,9 @@ $intro = get_field('introduction');
 
 $cta = get_field('cta');
 
-/* Nos Chambres */
-
-$surtitre_chamres = get_field('surtitre-chambres');
-$titre_chambres = get_field('titre-chambres');
-$ctaChambres = get_field('cta-gites');
-
 /* Séparator */
 $imgSep = get_field('image-separator');
-
-$bg_header = get_field('bg_header');
-
-if(!$bg_header):
-    $bg_url = get_template_directory_uri(  ).'/assets/img/bg-default.jpg';
-else :
-    $bg_header = get_field('bg_header');
-    $bg_url = $bg_header['url'];
-endif;?>
+?>
 
 <div id="modal-chambre">
     <div class="container_popup">

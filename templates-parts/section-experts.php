@@ -1,8 +1,7 @@
 <?php 
-$titreExpert = get_field('Titre-expert','options');
-$txtExpert = get_field('texte-expert','options');
-$ctaExpert = get_field('cta-expert','options');
-
+    $titreExpert = get_field('Titre-expert','options');
+    $txtExpert = get_field('texte-expert','options');
+    $ctaExpert = get_field('cta-expert','options');
 ?>
 
 <section id="expert">

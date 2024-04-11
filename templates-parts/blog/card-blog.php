@@ -22,7 +22,6 @@ endif;?>
     </div>
 
     <div class="content">
-
         <?php if($titre): echo $titre;endif;?>
         <?php if($intro): echo substr($intro,0,180).'...';endif;?>
         <br/>

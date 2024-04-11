@@ -1,29 +1,87 @@
 #section-promimmo {
-  h4 {
-    font-weight: 600;
-    text-transform: uppercase;
-    color: $primary-color;
+  margin: 100px 0;
+
+  .intro {
+    padding-bottom: 80px;
+
+    .subtitle {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+
+    h2 {
+      color: $secondary-color;
+      font-weight: 600;
+    }
   }
 
   .columns {
+    gap: 0;
+    margin: 100px auto;
+
     .col-g {
-      width: 60%;
+      width: 65%;
+
+      img {
+        margin-top: -100px;
+      }
     }
 
     .col-d {
-      width: 40%;
+      width: 35%;
       color: $dark-gray;
-      padding: 60px;
+
+      .intro-blue {
+        padding: 100px 0 60px 50px;
+      }
 
       .blue-block {
         background-color: $secondary-color;
-        color: $light;
         padding: 40px 60px;
+        margin-left: -30%;
 
-        strong {
-          font-weight: 600;
+        p {
+          color: $light;
+
+          strong {
+            font-weight: 600;
+          }
         }
       }
     }
+  }
+
+  .grid {
+    display: flex;
+    gap: 50px;
+
+    .card {
+      .card-img {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+      }
+      h3 {
+        color: $primary-color;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .card + .card {
+      border-left: 1px solid $light-gray;
+      padding-left: 50px;
+    }
+  }
+
+  .cta {
+    margin: 100px auto;
   }
 }

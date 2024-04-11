@@ -77,8 +77,7 @@ get_header();?>
     </div>
     <div class="container">
         <?php $ctaActus = get_field('cta-actus');
-
-        if($ctaActus): echo '<a href="'.$ctaActus['url'].'" class="cta cta-actus">'.$ctaActus['title'].'</a>';endif;
+            if($ctaActus): echo '<a href="'.$ctaActus['url'].'" class="cta cta-actus">'.$ctaActus['title'].'</a>';endif;
         ?>
     </div>
 </section>

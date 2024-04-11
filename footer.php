@@ -24,9 +24,6 @@ $cttCol3 = get_field('contenu_colonne_3','options');
                         <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['title'];?>" />
                     </div>
                 <?php endif;?>
-                
-                <?php if($cttCol1): echo $cttCol1; endif;?>
-
             </div>
 
             <div class="col-d content">

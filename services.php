@@ -42,7 +42,6 @@ $cta = get_field('services');
             
             if($query->have_posts()):
                 while($query->have_posts()): $query->the_post();?>
-
                     <?php $taxs = get_the_terms(get_the_id(),'type-realisations');
                     
                     if($taxs): 
@@ -59,8 +58,7 @@ $cta = get_field('services');
                 <?php endwhile;
             endif;
             
-            wp_reset_postdata();
-            ?>
+            wp_reset_postdata();?>
     </div>
 </section>
 

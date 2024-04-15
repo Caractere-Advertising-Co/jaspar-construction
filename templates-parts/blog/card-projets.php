@@ -13,10 +13,10 @@ endif;?>
 <?php if($i % 2):?>
     <div class="card-projets -left container columns">
         <div class="col-g">
-            <?php if($titre): echo '<h2>'.$titre.'</h2>';endif;?>
-            <?php if($intro): echo '<p>'.$intro.'</p>';endif;?>
+            <?php if($titre): echo '<h2>' . $titre . '</h2>';endif;?>
+            <?php if($intro): echo '<p>' . substr($intro,0,250) . ' ...</p>';endif;?>
 
-            <a href="<?php echo the_permalink( );?>" class="cta-border"><?php the_title();?></a>
+            <a href="<?php echo the_permalink( );?>" class="cta">Découvrir</a>
         </div>
 
         <div class="col-d">
@@ -29,10 +29,10 @@ endif;?>
             <img src="<?php echo $thmb;?>"/>
         </div>
         <div class="col-d">
-            <?php if($titre): echo '<h2>'.$titre.'</h2>';endif;?>
-            <?php if($intro): echo '<p>'.$intro.'</p>';endif;?>
+            <?php if($titre): echo '<h2>' . $titre . '</h2>';endif;?>
+            <?php if($intro): echo '<p>' . substr($intro,0,250) . '...</p>';endif;?>
             
-            <a href="<?php echo the_permalink( );?>" class="cta-border"><?php the_title();?></a>
+            <a href="<?php echo the_permalink();?>" class="cta">Découvrir</a>
         </div>
     </div>  
 <?php endif;?>

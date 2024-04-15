@@ -80,7 +80,7 @@ $cta = get_field('cta-contact');
     <div class="container">
         <h2>Biens <strong>Disponibles</strong></h2>
         
-        <table class="list-projet-bien">
+        <table class="list-projet-bien -nomobile">
             <thead>
                 <tr>
                     <th>Maisons</th>
@@ -113,6 +113,30 @@ $cta = get_field('cta-contact');
 
             </tbody>
         </table>
+
+
+        <div class="list-projet-bien -nodesktop">
+            <?php if(have_rows('biens_disponibles')):
+                while(have_rows('biens_disponibles')) : the_row();?>
+                    <div class="card-projet-bien">
+                    
+                        <?php 
+                        $nom = get_sub_field('nom_bien');
+                        $cara = get_sub_field('caracteristiques');
+                        $surf = get_sub_field('surface_hab');
+                        $prix = get_sub_field('prix');
+                        $plans = get_sub_field('plans');
+                    
+                              if($nom): echo '<h3><strong>'.$nom.'</strong></h3>'; endif;?></strong>
+                        <?php if($cara): echo '<p>'.$cara.'</p>'; endif;?>
+                        <?php if($surf): echo '<p><strong>'.$surf.'</strong></p>'; endif;?>
+                        <?php if($prix): echo '<p class="price"><strong>'.$prix.'</strong></p>'; endif;?>
+                        <?php if($plans): echo '<span class="cta"><a href="'.$plans['url'].'">VOIR</a></span>'; endif;?>  
+                        
+                    </div>       
+                <?php endwhile;
+            endif;?>
+        </div>
     </div>
 </section>
 

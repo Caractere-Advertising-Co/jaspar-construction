@@ -10,12 +10,13 @@ $liensCol2 = get_field('liens-gîtes_copier','options');
 $cttCol2 = get_field('contenu_colonne_2','options');
 
 $cttCol3 = get_field('contenu_colonne_3','options');
+$keywords = get_field('keywords','options');
 
 ?>
 
 <footer>
-    <div class="container">
-        <div class="footer-top columns">
+    <div class="footer-top">
+        <div class="container columns">
             <div class="col-g general-infos">
                 <?php $logo = get_field('logo_footer','options');?>
                 
@@ -49,6 +50,13 @@ $cttCol3 = get_field('contenu_colonne_3','options');
             </div>
         </div>
     </div>
+
+    <div class="footer-middle">
+        <div class="container">
+            <?php if($keywords): echo $keywords; endif;?>
+        </div>
+    </div>
+
     <div class="footer_bottom">
         <div class="container columns">
             <?php 

@@ -58,6 +58,10 @@
   .header {
     z-index: 10000 !important;
 
+    .top-header {
+      width: 90vw !important;
+    }
+
     .bottom-header {
       display: none;
     }
@@ -149,52 +153,69 @@
   }
 
   footer {
-    .container {
-      text-align: center;
+    .footer-top {
+      flex-direction: column;
+      padding: 0;
 
-      .footer-top {
-        flex-direction: column;
-        padding: 50px 0;
-        .col {
-          width: 100%;
-          padding-bottom: 0px;
-          text-align: center;
+      .container {
+        gap: 50px;
 
-          p {
-            text-align: center;
-          }
+        .col-d {
+          flex-direction: column;
+          align-items: center;
 
-          .logo-footer {
-            text-align: center;
-            height: 60px;
-            margin-bottom: 30px;
+          .col {
+            ul {
+              margin: 30px auto;
 
-            img {
-              margin: auto;
+              li {
+                text-align: center;
+              }
             }
           }
         }
+      }
 
-        .col + .col {
-          border-left: 0;
+      .col {
+        width: 100%;
+        padding-bottom: 0px;
+        text-align: center;
+
+        p {
+          text-align: center;
         }
 
-        .col-2 {
-          display: none;
-        }
+        .logo-footer {
+          text-align: center;
+          height: 60px;
+          margin-bottom: 30px;
 
-        .rs_footer {
-          display: flex;
-          flex-direction: column;
-
-          a + a {
-            margin-left: 10px;
+          img {
+            margin: auto;
           }
+        }
+      }
+
+      .col + .col {
+        border-left: 0;
+      }
+
+      .rs_footer {
+        display: flex;
+        justify-content: center;
+
+        a + a {
+          margin-left: 10px;
         }
       }
     }
 
     .footer_bottom {
+      .container {
+        gap: 30px;
+        flex-direction: column-reverse;
+      }
+
       .desktop {
         display: none;
       }
@@ -208,34 +229,6 @@
           gap: 30px;
           margin-bottom: 20px;
         }
-      }
-    }
-  }
-
-  .booking {
-    bottom: 250px;
-    width: 90vw;
-    left: 5vw;
-
-    .research-bar {
-      flex-direction: column;
-
-      .research-bar__item {
-        background: $light;
-        padding: 0;
-
-        width: 100%;
-        input,
-        select {
-          margin: auto;
-          text-align: center;
-          width: 100%;
-        }
-      }
-
-      .research-bar__item + .research-bar__item {
-        padding-left: 0;
-        border: none;
       }
     }
   }
@@ -320,11 +313,15 @@
   }
 
   #section-slider-left {
-    background: linear-gradient(180deg, #f7f8f9 40%, #fff 40%);
-    height: fit-content;
+    background: linear-gradient(180deg, #f7f8f9 50%, #fff 50%);
+    height: 1200px;
+    margin-bottom: 0;
+    padding-bottom: 50px;
 
     .container {
       .col-g {
+        height: 500px;
+
         .swiper {
           width: 95vw;
         }
@@ -332,6 +329,41 @@
     }
   }
 
+  #section-slider-right {
+    padding: 100px 0;
+
+    .container {
+      flex-direction: column-reverse;
+
+      .col-d {
+        .swiper {
+          height: 500px;
+        }
+      }
+
+      .col-g {
+        padding-top: 0;
+      }
+    }
+  }
+
+  #transition-blog {
+    padding-top: 0;
+    margin-top: 0;
+
+    .imgTr {
+      width: 95vw;
+    }
+
+    .container {
+      margin-top: -150px;
+
+      .col-d {
+        padding: 70px 40px;
+        width: 85%;
+      }
+    }
+  }
   #card-gites {
     .nomobile {
       display: none;
@@ -429,6 +461,60 @@
     }
   }
 
+  #liste-actualites,
+  #simple-page {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+
+      .card-news {
+        margin-bottom: 0;
+
+        h1 {
+          text-align: left;
+        }
+      }
+    }
+
+    .container {
+      flex-direction: row;
+      .card-news.-left {
+        .col-g {
+          padding: 20px 40px;
+          width: 70%;
+        }
+        .col-d {
+          width: 70%;
+          margin-left: -50%;
+          overflow: hidden;
+          max-height: 400px;
+        }
+      }
+
+      .card-news.-right {
+        .col-g {
+          width: 70%;
+          margin-right: -50%;
+          overflow: hidden;
+          max-height: 400px;
+        }
+        .col-d {
+          padding: 20px 40px;
+          width: 70%;
+        }
+      }
+
+      .content-toggle.amenagements {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .content-toggle {
+        .accordion {
+          width: calc(100% - 30px) !important;
+        }
+      }
+    }
+  }
+
   #section-2-tit {
     .container {
       .col-g {
@@ -488,48 +574,6 @@
     }
   }
 
-  #liste-actualites,
-  #simple-page {
-    .container {
-      flex-direction: row;
-      .card-news.-left {
-        .col-g {
-          padding: 20px 40px;
-          width: 70%;
-        }
-        .col-d {
-          width: 70%;
-          margin-left: -50%;
-          overflow: hidden;
-          max-height: 400px;
-        }
-      }
-
-      .card-news.-right {
-        .col-g {
-          width: 70%;
-          margin-right: -50%;
-          overflow: hidden;
-          max-height: 400px;
-        }
-        .col-d {
-          padding: 20px 40px;
-          width: 70%;
-        }
-      }
-
-      .content-toggle.amenagements {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .content-toggle {
-        .accordion {
-          width: calc(100% - 30px) !important;
-        }
-      }
-    }
-  }
-
   .gites-template #nos-chambres .container .swiper-chambre-button-next {
     display: none;
   }
@@ -543,33 +587,208 @@
     margin: 50px auto;
   }
 
-  /* Gites */
+  /* Page a propos */
 
-  .gites-template {
-    #citation {
-      .container {
-        margin: 0 auto;
+  #section-blue {
+    .container {
+      .paragraph {
+        padding-left: 10vw;
+      }
+    }
+  }
+
+  #section-promimmo {
+    .grid {
+      flex-direction: column;
+
+      .card + .card {
+        border-left: none;
+        padding-left: 0;
       }
     }
 
-    #acco-infos {
-      .container {
-        .col-g {
-          padding-top: 50px;
-        }
-        .col-d {
-          width: 80%;
-          margin: auto;
+    .columns {
+      .col-g {
+        width: 100%;
+      }
 
-          .swiper {
-            .swiper-wrapper {
-              .swiper-slide {
-                height: 350px;
-              }
-            }
+      .col-d {
+        width: 100%;
+
+        .intro-blue {
+          padding: 50px 0;
+
+          p:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .blue-block {
+          padding: 30px 40px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  #section-prom-immo {
+    .container {
+      .col-d {
+        padding-top: 0;
+      }
+    }
+
+    .columns {
+      gap: 50px;
+
+      .col-g {
+        .img-content {
+          height: 500px;
+        }
+      }
+    }
+  }
+
+  #listing-projets {
+    padding: 0;
+
+    .container {
+      .card-projets.-left {
+        flex-direction: column-reverse;
+
+        .col-g {
+          margin-top: -150px;
+          padding: 50px 0px 50px 30px;
+          height: auto;
+          width: calc(100% - 30px);
+        }
+
+        .col-d {
+          height: 400px;
+          max-height: max-content;
+          margin-left: -5%;
+        }
+      }
+
+      .card-projets.-right {
+        flex-direction: column;
+
+        .col-d {
+          margin-top: -150px;
+          padding: 50px 30px 50px 0px;
+          height: auto;
+          width: calc(100% - 30px);
+        }
+
+        .col-g {
+          height: 400px;
+          max-height: max-content;
+          margin-right: -5%;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .single-projets {
+    #simple-page-projet {
+      .columns {
+        .col-g {
+          width: 100vw;
+        }
+
+        .columns {
+          width: 100%;
+          flex-direction: row;
+        }
+      }
+    }
+
+    #banner-jpo {
+      .columns {
+        .col-g {
+          width: calc(100% - 120px);
+          padding: 20px 60px 50px 60px;
+        }
+
+        .col-d {
+          width: 100%;
+
+          a {
+            left: 150px !important;
+            top: -30px !important;
           }
         }
       }
+    }
+
+    #description-projet {
+      .cta {
+        display: none !important;
+      }
+    }
+  }
+
+  .page-template-services {
+    #galerie {
+      .bloc-filter {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+        .filter + .filter {
+          padding-left: 0;
+          border-left: 0;
+        }
+      }
+
+      .grid-realisations {
+        grid-template-columns: repeat(2, 1fr);
+
+        .card-realisation {
+          height: 250px !important;
+        }
+      }
+    }
+  }
+
+  #simple-page {
+    .grid_articles {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+
+  #list-bien {
+    .list-projet-bien.-nodesktop {
+      display: block;
+
+      .card-projet-bien {
+        padding-bottom: 30px;
+
+        h3 {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+
+        .cta {
+          margin-right: 0;
+          margin-left: auto;
+          margin-top: -60px;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .card-projet-bien + .card-projet-bien {
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+      }
+    }
+
+    .list-projet-bien.-nomobile {
+      display: none;
     }
   }
 

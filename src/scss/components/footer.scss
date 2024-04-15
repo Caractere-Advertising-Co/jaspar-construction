@@ -1,11 +1,10 @@
 footer {
   background-color: $secondary-color;
-  .container {
-    margin-bottom: 150px;
-    border-bottom: 1px solid $light-gray;
-    padding-bottom: 50px;
-
-    .footer-top {
+  .footer-top {
+    .container {
+      margin-bottom: 50px;
+      border-bottom: 1px solid $light-gray;
+      padding-bottom: 50px;
       display: flex;
       justify-content: space-around;
       padding-top: 80px;
@@ -116,6 +115,20 @@ footer {
             color: $light;
           }
         }
+      }
+    }
+  }
+
+  .footer-middle {
+    margin: 50px 0;
+
+    .container {
+      p {
+        text-align: justify;
+        text-align-last: center;
+        color: $light-gray;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
       }
     }
   }

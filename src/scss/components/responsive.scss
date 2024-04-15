@@ -58,6 +58,10 @@
   .header {
     z-index: 10000 !important;
 
+    .bottom-header {
+      display: none;
+    }
+
     .col-g,
     .col-d {
       width: 50%;
@@ -243,7 +247,7 @@
   }
 
   #hero-container {
-    height: 90vh !important;
+    height: 70vh !important;
 
     .swiper {
       .swiper-wrapper {
@@ -269,7 +273,11 @@
               font-size: 2.5rem;
               line-height: 2.5rem;
               margin-top: 40px;
-              margin-bottom: 100px;
+              margin-bottom: 20px;
+            }
+
+            .cta {
+              margin-top: 2rem;
             }
           }
         }
@@ -287,6 +295,40 @@
 
     .col-d {
       margin-top: 0px;
+    }
+  }
+
+  #galerie-fullwidth {
+    .container-fullwidth {
+      flex-direction: column;
+
+      .colg,
+      .cold {
+        width: 100%;
+      }
+    }
+  }
+
+  #banner-fullwidth {
+    padding: 50px 0;
+
+    .container {
+      .subtitle {
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  #section-slider-left {
+    background: linear-gradient(180deg, #f7f8f9 40%, #fff 40%);
+    height: fit-content;
+
+    .container {
+      .col-g {
+        .swiper {
+          width: 95vw;
+        }
+      }
     }
   }
 
@@ -495,17 +537,6 @@
   .page-template-services #liste-actualites {
     padding-bottom: 0px;
     border-bottom: 1px solid $light-gray;
-  }
-
-  #banner-fullwidth {
-    .container {
-      .subtitle {
-        letter-spacing: 3px;
-      }
-      .cta {
-        margin: 50px auto 0;
-      }
-    }
   }
 
   .tiny-separator {

@@ -60,7 +60,7 @@ get_header();?>
         <?php 
         $args = array(
             "post_type" => "post",
-            "post_per_page" => 2
+            "posts_per_page" => 2
         );
 
         $news = new WP_Query($args);

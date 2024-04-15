@@ -26,8 +26,12 @@
       margin-bottom: 20px;
     }
 
-    h2 {
+    h1 {
       color: $secondary-color;
+      font-size: 2rem;
+      line-height: 2rem;
+      text-transform: none;
+      text-align: left9;
 
       strong {
         font-weight: 600;
@@ -55,6 +59,68 @@
 
     p {
       margin-top: 20px;
+    }
+  }
+}
+
+/* Projets */
+
+.card-projets.-left {
+  gap: 0;
+  position: relative;
+  margin-bottom: 50px;
+
+  .col-g {
+    margin-top: 100px;
+    padding: 30px 80px;
+    background: $light;
+    position: relative;
+    width: calc(50% - 160px);
+
+    p {
+      margin-top: 20px;
+    }
+
+    .cta-border {
+      margin-left: 0;
+      color: $primary-color;
+    }
+  }
+
+  .col-d {
+    width: 70%;
+    margin-left: -20%;
+    overflow: hidden;
+    max-height: 500px;
+  }
+}
+
+.card-projets.-right {
+  gap: 0;
+  position: relative;
+  margin-bottom: 50px;
+
+  .col-g {
+    width: 70%;
+    margin-right: -20%;
+    overflow: hidden;
+    max-height: 500px;
+  }
+
+  .col-d {
+    margin-top: 100px;
+    padding: 30px 80px;
+    background: $light;
+    position: relative;
+    width: calc(50% - 160px);
+
+    p {
+      margin-top: 20px;
+    }
+
+    .cta-border {
+      margin-left: 0;
+      color: $primary-color;
     }
   }
 }

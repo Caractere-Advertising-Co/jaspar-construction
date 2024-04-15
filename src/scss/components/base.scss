@@ -722,3 +722,31 @@ form {
     }
   }
 }
+
+#section-prom-immo {
+  padding: 100px 0;
+
+  .columns {
+    .col-g {
+      .subtitle {
+        font-weight: 700;
+      }
+
+      h2 {
+        color: $secondary-color;
+      }
+
+      .img-content {
+        height: 750px;
+        margin-top: 100px;
+      }
+    }
+    .col-d {
+      padding-top: 250px;
+
+      .cta {
+        margin-top: 50px;
+      }
+    }
+  }
+}

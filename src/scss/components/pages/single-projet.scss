@@ -1,0 +1,122 @@
+.single-projets {
+  #simple-page-projet {
+    padding-top: 10px;
+
+    .columns {
+      gap: 10px;
+      width: 100vw;
+      max-width: 100vw;
+
+      .col-g {
+        gap: 10px;
+        width: 60%;
+      }
+
+      .col-d {
+        gap: 10px;
+        flex-direction: column;
+        width: 40%;
+
+        a {
+          margin: 0;
+          img {
+          }
+        }
+      }
+    }
+  }
+
+  #banner-jpo {
+    padding: 100px 0;
+    .columns {
+      gap: 0;
+
+      .col-g {
+        background: $primary-color;
+        width: 60%;
+        padding: 20px 120px 20px 60px;
+
+        h2,
+        p {
+          color: $light;
+        }
+      }
+
+      .col-d {
+        position: relative;
+        width: 40%;
+
+        .cta {
+          background: $secondary-color;
+          position: absolute;
+          left: -100px;
+          top: 100px;
+        }
+      }
+    }
+  }
+
+  #description-projet {
+    .container {
+      .columns {
+        justify-content: space-between;
+
+        .subtitle p {
+          color: $primary-color;
+        }
+      }
+
+      h2 {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  #list-bien {
+    padding: 100px 0;
+    h2 {
+      text-align: center;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        background: $light-gray;
+        color: $primary-color;
+
+        tr {
+          th {
+            padding: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            text-align: center;
+            color: $dark-gray;
+            padding: 25px 0;
+            border-bottom: 1px solid $middle-gray;
+          }
+
+          .cta-plan {
+            a {
+              color: $middle-gray;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #banner-fullwidth {
+    margin: 0 2vw;
+  }
+}

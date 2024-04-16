@@ -52,6 +52,7 @@ $cta = get_field('services');
 
                     <a data-fslightbox href="<?php echo get_the_post_thumbnail_url();?>" data-filters="<?php echo $value;?>">
                         <div class="card-realisation">
+                            <div class="hover_effect"><?php echo get_the_title();?></div>
                             <img src="<?php echo get_the_post_thumbnail_url();?>" />
                         </div>
                     </a>

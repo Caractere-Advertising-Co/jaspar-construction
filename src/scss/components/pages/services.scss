@@ -40,6 +40,26 @@
 
         .card-realisation {
           height: 400px;
+          position: relative;
+
+          .hover_effect {
+            background: $secondary-color;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity ease-in 500ms;
+          }
+        }
+
+        .card-realisation:hover {
+          .hover_effect {
+            opacity: 0.6;
+          }
         }
       }
     }

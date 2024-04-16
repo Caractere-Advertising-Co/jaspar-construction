@@ -45,7 +45,6 @@ function fix_svg() {
   add_filter( 'upload_mimes', 'cc_mime_types' );
   add_action( 'admin_head', 'fix_svg' );
 
-
   add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 function enqueue_custom_scripts() {

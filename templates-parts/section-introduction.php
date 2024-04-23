@@ -3,13 +3,20 @@
     $img = get_field('image_about','options');
     
     $intro = get_field('introduction-blog');
-    if(!$intro):$intro = get_field('introduction','options');endif;
+    if(!$intro):
+        $intro = get_field('introduction','options');
+    endif;
 
     $titreJps = get_field('titre-about-jps');
-    if(!$titreJps):$titreJps = get_field('titre-about-jps','options');endif;
+
+    if(!$titreJps):
+        $titreJps = get_field('titre-about-jps','options');
+    endif;
 
     $btnJps = get_field('lien_about');
-    if(!$btnJps):$btnJps = get_field('lien_about','options');endif;
+    if(!$btnJps):
+        $btnJps = get_field('lien_about','options');
+    endif;
 ?>
 
 <section id="section-introduction">

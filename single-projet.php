@@ -38,7 +38,7 @@ $cta = get_field('cta-contact');
                 <?php foreach ($galerie as $g):?>
                     <?php if($i > 1):?>
                         <a data-fslightbox href="<?php echo $g['url'];?>" <?php  echo $i > 3 ? 'style="display:none;"' : '';?>>
-                            <img src="<?php echo $g['url'];?>" alt="<?php echo $secImg['title'];?>"/>
+                            <img src="<?php echo $g['url'];?>" alt="<?php echo $g['title'];?>"/>
                         </a>
                     <?php endif;?>
                 <?php $i++;

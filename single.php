@@ -15,7 +15,10 @@ $ctaPr = get_field('cta-projet');
 $cta = get_field('cta');
 
 $galerie = get_field('galerie-fullwidth');
-$firstImg = $galerie[0];
+
+if($galerie):
+    $firstImg = $galerie[0];
+endif;
 $i = 0;
 
 ?>

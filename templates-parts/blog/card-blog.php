@@ -19,7 +19,7 @@ endif;?>
 
     <div class="content">
         <a href="<?php echo the_permalink( );?>"><?php if($titre): echo $titre;endif;?></a>
-        <?php if($intro): echo substr($intro,0,180).'...';endif;?>
+        <?php if($intro): echo substr($intro,0,250).'...';endif;?>
         <br/>
         <a href="<?php echo the_permalink( );?>">Lire plus</a>
     </div>

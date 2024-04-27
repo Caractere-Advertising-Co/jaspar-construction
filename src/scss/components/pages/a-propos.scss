@@ -1,5 +1,27 @@
 .page-template-a-propos {
   #section-introduction {
     padding-top: 100px;
+    min-height: 500px;
+  }
+
+  #section-service-2{
+    margin:100px auto;
+
+    .columns{
+      .col-g{
+        h2{
+          color:$secondary-color;
+          font-weight: 600;
+        }
+      }
+
+      .col-d{
+        padding-top: 60px;
+        .img{
+          width:calc(100% - 50px);
+          box-shadow: 50px -50px 0 #29255c;
+        }
+      }
+    }
   }
 }

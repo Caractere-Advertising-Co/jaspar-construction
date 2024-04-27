@@ -1,14 +1,16 @@
 .page-template-a-propos {
   #section-introduction {
     padding-top: 100px;
-    min-height: 500px;
   }
 
   #section-service-2{
     margin:100px auto;
 
     .columns{
+      min-height: 500px;
+
       .col-g{
+        
         h2{
           color:$secondary-color;
           font-weight: 600;

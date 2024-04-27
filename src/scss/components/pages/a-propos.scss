@@ -12,12 +12,14 @@
         h2{
           color:$secondary-color;
           font-weight: 600;
+          margin-bottom: 30px;
         }
       }
 
       .col-d{
         padding-top: 60px;
-        .img{
+        
+        img{
           width:calc(100% - 50px);
           box-shadow: 50px -50px 0 $secondary-color;
         }

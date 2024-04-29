@@ -16,7 +16,9 @@ $img_blue = get_field('img-blue');
 
     <div class="container columns">
         <div class="col-g">
-            <img src="<?php echo $img_blue['url'];?>" alt="<?php $img_blue['title'];?>"/>
+            <div class="img-colg">
+                <img src="<?php echo $img_blue['url'];?>" alt="<?php $img_blue['title'];?>"/>
+            </div>
         </div>
 
         <div class="col-d">

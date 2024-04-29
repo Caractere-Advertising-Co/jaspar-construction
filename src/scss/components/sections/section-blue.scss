@@ -6,16 +6,27 @@
     h2 {
       color: $light;
     }
+  }
 
-    .paragraph {
-      margin-top: 50px;
-      padding-left: 25vw;
-      p {
-        color: $light;
-      }
+  .columns{
+    .col-g{
+      width: 25%;
+      padding-top: 50px;
+    }
 
-      .cta {
+    .col-d{
+      width: 75%;
+
+      .paragraph {
         margin-top: 50px;
+        
+        p {
+          color: $light;
+        }
+  
+        .cta {
+          margin-top: 50px;
+        }
       }
     }
   }

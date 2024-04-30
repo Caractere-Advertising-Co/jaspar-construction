@@ -33,7 +33,7 @@
     </div>
 
     <?php if(is_front_page()):
-        get_template_part( 'template-parts/section-popup' );
+        get_template_part( 'templates-parts/section-popup' );
     endif;?>
 
     <header>

@@ -13,11 +13,15 @@
                     <div class="close_popup" id="close_popup">x</div>
                     
                     <a href="<?php if($cta):echo $cta['url'];endif?>" class="content_popup">
-                        <?php if($contentPopUp):
-                            echo $contentPopUp;
-                        elseif ($imagePu):?>
-                            <img src="<?php echo $imagePu['url'];?>" alt="<?php echo $imagePu['title'];?>"/>
-                        <?php endif;?>
+                        <div class="col-g">
+                            <?php if($imagePu):?>
+                                <img src="<?php echo $imagePu['url'];?>" alt="<?php echo $imagePu['title'];?>"/>
+                            <?php endif;?>    
+                        </div>
+                        <div class="col-d">
+                            <?php if($contentPopUp): echo $contentPopUp; endif;?>
+                            <?php if($cta): echo '<a href="'.$cta['url'].'">'.$cta['title'].'</a>';endif;?>
+                        </div>
                     </a>
                 </div>
             </div>

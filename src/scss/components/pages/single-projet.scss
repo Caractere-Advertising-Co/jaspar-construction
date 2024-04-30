@@ -19,6 +19,7 @@
 
         a {
           margin: 0;
+          position: relative;
 
           &:nth-child(2){
             &::before{

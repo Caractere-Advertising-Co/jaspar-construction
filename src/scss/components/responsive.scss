@@ -600,10 +600,15 @@
   #section-promimmo {
     .grid {
       flex-direction: column;
-
+      
+      .card{
+        width: 100%;
+      }
+      
       .card + .card {
         border-left: none;
         padding-left: 0;
+        width: 100%;
       }
     }
 
@@ -999,6 +1004,25 @@
         padding: 30px;
         width: 80%;
         max-width: 80%;
+      }
+    }
+  }
+
+  #section-blue{
+    .columns{
+      .col-g{
+          width: 100%;
+          padding-top: 50px;
+          margin-bottom: -100px;
+        }
+      }
+
+      .col-d{
+        width: 100%;
+
+        .paragraph{
+          padding: 0;
+        }
       }
     }
   }

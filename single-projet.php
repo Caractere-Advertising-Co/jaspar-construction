@@ -66,7 +66,7 @@ $cta = get_field('cta-contact');
     <div class="container">
         <div class="columns">
             <span class="subtitle"><?php if($surtitre): echo $surtitre;endif;?></span>
-            <a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a>
+            <?php if($cta): ?><a href="<?php echo $cta['url'];?>" class="cta"><?php echo $cta['title'];?></a><?php endif;?>
         </div>
 
         <?php if($desc): echo $desc; endif;?>

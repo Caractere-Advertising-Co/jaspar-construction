@@ -53,7 +53,7 @@ $(document).ready(function () {
   // Fermeture de la popup lors du clic sur le bouton de fermeture
 
   $('#close_popup').on('click',function(event){
-    $('#modal_popup_front').style.display = 'none';
+    $('#modal_popup_front').css("display","none");
   });
 
     // Fermeture de la popup lors du clic en dehors du contenu

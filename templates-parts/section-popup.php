@@ -16,7 +16,7 @@
                     <div class="col-d">
                         <div class="close_popup" id="close_popup">x</div>
                         <?php if($contentPopUp): echo $contentPopUp; endif;?>
-                        <?php if($cta): echo '<a href="'.$cta['url'].'">'.$cta['title'].'</a>';endif;?>
+                        <?php if($cta): echo '<a href="'.$cta['url'].'" class="cta">'.$cta['title'].'</a>';endif;?>
                     </div>
                 </div>
             </div>

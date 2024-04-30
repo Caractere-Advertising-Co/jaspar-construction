@@ -47,4 +47,24 @@ $(document).ready(function () {
     $(".container_popup").empty();
     $("#modal-chambre").hide();
   }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Sélection de la popup et du bouton de fermeture
+    var modal = document.getElementById('#modal_popup_front');
+    var closeButton = document.getElementById('close_popup');
+
+    // Fermeture de la popup lors du clic sur le bouton de fermeture
+    if(closeButton) {
+        closeButton.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+    }
+
+    // Fermeture de la popup lors du clic en dehors du contenu
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+  });
 });

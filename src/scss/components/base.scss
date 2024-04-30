@@ -785,20 +785,26 @@ form {
 
     .col-d{
       padding: 50px;
+      width: calc(50% - 100px);
+      
       h2{
-        color:$secondary-color;
+        color: #29255c;
         font-weight: 800;
         text-transform: uppercase;
         text-align: left;
-        line-height: 2.8rem;
+        line-height: 1.8rem;
+        font-size: 2rem;
       }
 
       h3{
-        background-color: $primary-color;
-        color:$light;
+        background-color: #5895cf;
+        color: #fff;
         padding: 0 20px;
-        margin-top: -10px;
+        margin-top: -3px;
         transform: rotate(5deg);
+        font-size: 1.5rem;
+        width: fit-content;
+        line-height: 2rem;
       }
 
       h4{
@@ -808,6 +814,12 @@ form {
         font-size: 1.3rem;
         font-weight: 700;
         color: #e4e4e4;
+      }
+
+      p{
+        font-size: .7rem;
+        line-height: 1rem;
+        text-align: left;
       }
     }
    

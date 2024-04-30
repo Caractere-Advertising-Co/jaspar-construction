@@ -56,10 +56,10 @@ $(document).ready(function () {
     $('#modal_popup_front').css("display","none");
   });
 
-    // Fermeture de la popup lors du clic en dehors du contenu
-    window.addEventListener('click', function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    });
+  // Fermeture de la popup lors du clic en dehors du contenu
+  window.on('click', function(event) {
+    if (event.target == modal) {
+      modal.css("display","none");
+    }
+  });
 });

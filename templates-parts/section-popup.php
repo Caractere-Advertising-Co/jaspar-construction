@@ -12,7 +12,7 @@
                 <div class="centerPopup">
                     <div class="close_popup" id="close_popup">x</div>
                     
-                    <a href="<?php echo $cta['url'];?>" class="content_popup">
+                    <a href="<?php if($cta):echo $cta['url'];endif?>" class="content_popup">
                         <?php if($contentPopUp):
                             echo $contentPopUp;
                         elseif ($imagePu):?>

@@ -108,7 +108,7 @@
         li {
           a {
             font-weight: 300;
-            font-size: 2.5rem;
+            font-size: 2rem;
           }
 
           .sub-menu {
@@ -156,6 +156,12 @@
     .footer-top {
       flex-direction: column;
       padding: 0;
+
+      .logo-footer{
+        img{
+          width: 90%;
+        }
+      }
 
       .container {
         gap: 50px;

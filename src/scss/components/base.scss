@@ -786,7 +786,7 @@ form {
     .col-d{
       padding: 50px;
       width: calc(50% - 100px);
-      
+
       h2{
         color: #29255c;
         font-weight: 800;
@@ -802,7 +802,6 @@ form {
         padding: 0 20px;
         margin-top: -3px;
         transform: rotate(5deg);
-        font-size: 1.5rem;
         width: fit-content;
         line-height: 2rem;
       }
@@ -811,14 +810,11 @@ form {
         text-align: left;
         text-transform: uppercase;
         letter-spacing: 5px;
-        font-size: 1.3rem;
         font-weight: 700;
         color: #e4e4e4;
       }
 
       p{
-        font-size: .7rem;
-        line-height: 1rem;
         text-align: left;
       }
     }

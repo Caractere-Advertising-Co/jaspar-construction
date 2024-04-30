@@ -762,21 +762,15 @@ form {
   z-index: 99999;
   -webkit-backdrop-filter: brightness(0.15);
   backdrop-filter: brightness(0.15);
-
-  .centerPopup {
-    display: flex;
-    max-width: 33vw;
-    height: 90vh;
-    top: 5vh;
-    margin: auto;
-    position: relative;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .content_popup {
     position: relative;
     display: flex;
     margin: auto;
-    max-width: 30vw;
+    max-width: 50vw;
     text-align: center;
 
     .col-g{
@@ -788,21 +782,33 @@ form {
     }
 
     .col-d{
+      padding: 50px;
       h2{
         color:$secondary-color;
         font-weight: 800;
         text-transform: uppercase;
         text-align: left;
+        line-height: 2.8rem;
       }
 
       h3{
-        background-color: $primary-color;
-        color:$light;
-        transform: rotate(3deg);
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #e4e4e4;
+      }
+
+      h4{
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #e4e4e4;
       }
     }
-
-    
   }
 
   .close_popup {

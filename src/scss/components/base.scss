@@ -755,6 +755,7 @@ form {
 /* Popup Front Page */
 
 
+
 #modal_popup_front {
   width: 100vw;
   height: 100vh;
@@ -793,12 +794,11 @@ form {
       }
 
       h3{
-        text-align: left;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: #e4e4e4;
+        background-color: $primary-color;
+        color:$light;
+        padding: 0 20px;
+        margin-top: -10px;
+        transform: rotate(5deg);
       }
 
       h4{
@@ -810,6 +810,7 @@ form {
         color: #e4e4e4;
       }
     }
+   
   }
 
   .close_popup {

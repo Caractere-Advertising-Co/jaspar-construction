@@ -779,7 +779,7 @@
 
   #list-bien {
     .list-projet-bien.-nodesktop {
-      display: block;
+      display: block !important;
 
       .card-projet-bien {
         padding-bottom: 30px;

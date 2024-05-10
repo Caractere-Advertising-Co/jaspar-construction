@@ -131,7 +131,7 @@ $cta = get_field('cta-contact');
                         <?php if($cara): echo '<p>'.$cara.'</p>'; endif;?>
                         <?php if($surf): echo '<p><strong>'.$surf.'</strong></p>'; endif;?>
                         <?php if($prix): echo '<p class="price"><strong>'.$prix.'</strong></p>'; endif;?>
-                        <?php if($plans): echo '<span class="cta"><a href="'.$plans['url'].'">VOIR</a></span>'; endif;?>  
+                        <?php if($plans): echo '<span class="cta-plan"><a href="'.$plans['url'].'">VOIR</a></span>'; endif;?>  
                         
                     </div>       
                 <?php endwhile;

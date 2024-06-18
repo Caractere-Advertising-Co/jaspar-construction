@@ -128,6 +128,19 @@
             color: $dark-gray;
             padding: 25px 0;
             border-bottom: 1px solid $middle-gray;
+
+            .sold{
+              background: $primary-color;
+              transform: rotateZ(350deg);
+              text-align: center;
+              color: #fff;
+              font-weight: 400;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              width: fit-content;
+              padding: 0 16px;
+              margin: 0 auto;
+            }
           }
 
           .cta-plan {

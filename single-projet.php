@@ -99,13 +99,14 @@ $cta = get_field('cta-contact');
                         $surf = get_sub_field('surface_hab');
                         $prix = get_sub_field('prix');
                         $plans = get_sub_field('plans');
+                        $vendu = get_sub_field('vendu');
                     
                         ?>
                         <tr>
                             <td><strong><?php if($nom): echo $nom; endif;?></strong></td>
                             <td><?php if($cara): echo $cara; endif;?></td>
                             <td><strong><?php if($surf): echo $surf; endif;?></strong></td>
-                            <td><strong><?php if($prix): echo $prix; endif;?></strong></td>
+                            <td><?php if($prix): echo $vendu ? '<p class="sold">Vendu</p>' : $prix; endif;?></td>
                             <td class="cta-plan"><?php if($plans): echo '<a href="'.$plans['url'].'">VOIR</a>'; endif;?></td>
                         </tr>
                     <?php endwhile;
@@ -126,11 +127,12 @@ $cta = get_field('cta-contact');
                         $surf = get_sub_field('surface_hab');
                         $prix = get_sub_field('prix');
                         $plans = get_sub_field('plans');
+                        $vendu = get_sub_field('vendu');
                     
                               if($nom): echo '<h3><strong>'.$nom.'</strong></h3>'; endif;?></strong>
                         <?php if($cara): echo '<p>'.$cara.'</p>'; endif;?>
                         <?php if($surf): echo '<p><strong>'.$surf.'</strong></p>'; endif;?>
-                        <?php if($prix): echo '<p class="price"><strong>'.$prix.'</strong></p>'; endif;?>
+                        <?php if($prix): echo $vendu ? '<p class="sold">Vendu</p>' : '<p class="price"><strong>'.$prix.'</strong></p>'; endif;?>
                         <?php if($plans): echo '<span class="cta"><a href="'.$plans['url'].'">VOIR</a></span>'; endif;?>  
                         
                     </div>       

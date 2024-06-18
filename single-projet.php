@@ -107,7 +107,7 @@ $cta = get_field('cta-contact');
                             <td><?php if($cara): echo $cara; endif;?></td>
                             <td><strong><?php if($surf): echo $surf; endif;?></strong></td>
                             <td><?php if($prix): echo $vendu ? '<p class="sold">Vendu</p>' : $prix; endif;?></td>
-                            <td class="cta-plan"><?php if($plans): echo '<a href="'.$plans['url'].'">VOIR</a>'; endif;?></td>
+                            <td class="cta-plan"><?php if($plans): echo $vendu ? '' : '<a href="'.$plans['url'].'">VOIR</a>'; endif;?></td>
                         </tr>
                     <?php endwhile;
                 endif;?>
@@ -133,7 +133,7 @@ $cta = get_field('cta-contact');
                         <?php if($cara): echo '<p>'.$cara.'</p>'; endif;?>
                         <?php if($surf): echo '<p><strong>'.$surf.'</strong></p>'; endif;?>
                         <?php if($prix): echo $vendu ? '<p class="sold">Vendu</p>' : '<p class="price"><strong>'.$prix.'</strong></p>'; endif;?>
-                        <?php if($plans): echo '<span class="cta"><a href="'.$plans['url'].'">VOIR</a></span>'; endif;?>  
+                        <?php if($plans): echo $vendu ? '' : '<span class="cta"><a href="'.$plans['url'].'">VOIR</a></span>'; endif;?>  
                         
                     </div>       
                 <?php endwhile;
